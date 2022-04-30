@@ -35,20 +35,20 @@ local tableinsert = table.insert
 
 -- // Silent Aim Vars
 getgenv().Aiming = {
-    Enabled = true,
+    Enabled = getgenv().Enabled
 
-    ShowFOV = false,
+    ShowFOV = true,
     FOV = 20,
     FOVSides = 300,
 
-    VisibleCheck = true,
+    VisibleCheck = getgenv().VisibleCheck
     
-    HitChance = 100,
+    HitChance = getgenv().HitChance
 
     Selected = nil,
     SelectedPart = nil,
 
-    TargetPart = {"Head", "HumanoidRootPart"},
+    TargetPart = getgenv().TargetPart
 
     Ignored = {
         Teams = {
