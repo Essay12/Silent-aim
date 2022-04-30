@@ -35,20 +35,17 @@ local tableinsert = table.insert
 
 -- // Silent Aim Vars
 getgenv().Aiming = {
+game:GetService("RunService").RenderStepped:Connect(function()
     Enabled = Toggles.Silent.Value
-    ShowFOV = true,
-    FOV = 120,
-    FOVSides = 300,
-
     VisibleCheck = Toggles.Visible.Value
-    
     HitChance = Options.HitChance.Value
-
+    TargetPart = Options.SilentHit.Value
+    ShowFOV = Toggles.FOVVV.Value
+    FOV = Options.FOXXX.Value
+end)
+    FOVSides = 300,
     Selected = nil,
     SelectedPart = nil,
-
-    TargetPart = Options.SilentHit.Value
-
     Ignored = {
         Teams = {
             {
